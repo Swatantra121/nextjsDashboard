@@ -1,0 +1,129 @@
+body {
+  background-color: #dedada;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #343a40;
+  color: #fff;
+}
+.navbar-brand {
+  float: left;  
+  height: 50px;
+  padding: 3px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #d1d1d1;
+}
+
+.container-fluid {
+  padding: 0 15px;
+}
+
+.header-title {
+  background: radial-gradient(black, transparent);
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group select {
+  margin-bottom: 10px;
+}
+
+.hex-card {
+  width: 200px;
+  height: 200px;
+  background: #6c757d;
+  margin: 31px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.hex-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hex-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.hex-content p {
+  font-size: 2.7em;
+  margin: 0;
+  font-weight: bold;
+  color: rgb(79, 76, 76);
+}
+
+.hex-content span {
+  margin-top: 5px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+
+.table-container {
+  background: #343a40;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 20px;
+}
+
+.table-container h5 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.table {
+  color: white;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-2 {
+      flex: 0 0 auto;
+      width: 16.66666667%;
+      margin: 20px;
+  }
+}
