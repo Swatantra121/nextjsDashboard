@@ -1,8 +1,30 @@
 "use client"; // Ajoutez ceci en haut
 
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { commonService } from '../service/commonService';
+import { NextResponse } from 'next/server';
+const contrydata = new commonService
 
 const Header: React.FC = () => {
+  interface Country {
+    countryId: number;
+    countryName: string;
+    countryCode: string;
+  }
+  const [CountryArray, setCountryArray] = useState<Country[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      debugger;
+      try {
+        const resultData = await contrydata.countryData();
+        setCountryArray(resultData.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []); 
   return (
    <>
     <div className="row">
@@ -48,12 +70,15 @@ const Header: React.FC = () => {
         </div>
         <div className="col-md-2">
           <div className="form-group">
+         
             <select id="country" className="form-control">
-              <option value="">Country</option>
-              <option value="India">India</option>
-              <option value="UAE">UAE</option>
-              <option value="Nepal">Nepal</option>
+            {CountryArray.map((country) => (
+              <option key={country.countryId} value={country.countryId}>
+              {country.countryName}
+              </option>
+                ))}
             </select>
+            
           </div>
         </div>
         <div className="col-md-2">

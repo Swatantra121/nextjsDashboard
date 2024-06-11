@@ -1,10 +1,10 @@
-const config = {
+const connectiondata = {
   
-  DEVHOSTLURL: 'prdbkpmaster.c63tfr0piamf.ap-southeast-1.rds.amazonaws.com',
+  DEVHOSTLURL: 'dev-vestige-db-cluster.cluster-c63tfr0piamf.ap-southeast-1.rds.amazonaws.com',
   DEVCONNECTIONPORT: 3306,
   DEVUSERNAME: 'admin',
   DEVUSERPASSWORD: 'vestige123',
-  DEVUSERDATABASE: 'vestige_common',
+  DEVUSERDATABASE: 'uat_vestige_common',
   
   // // UAT Connection for common
   // UATHOSTLURL: 'dev-vestige-db-cluster.cluster-c63tfr0piamf.ap-southeast-1.rds.amazonaws.com',
@@ -21,4 +21,4 @@ const config = {
   
   }
 
-  export  default  config;
+  export  default  connectiondata;

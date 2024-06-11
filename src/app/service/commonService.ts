@@ -3,14 +3,14 @@
 
 export class commonService{
 
-    countryData = async (params:any) =>{
+    countryData = async () =>{
       debugger;
             const response = await fetch('./api/commonController', {
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                   },
-                body: JSON.stringify(params),
+                // body: JSON.stringify(params),
             });
             if(response.status === 200){
                 const data = await response.json();
